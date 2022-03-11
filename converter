@@ -1,0 +1,5 @@
+#!/bin/bash
+for i in *.mov
+do
+ ffmpeg -i $i -qscale 0 $i.mp4
+done 

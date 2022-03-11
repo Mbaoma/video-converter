@@ -1,0 +1,5 @@
+#!/bin/bash
+chmod u+x converter
+brew install ffmpeg
+brew update && brew upgrade ffmpeg
+./converter
