@@ -1,15 +1,7 @@
 # video-converter
 To write a bash script based off fmpeg, that converts videos in .mov format to .mp4 formats.
 
-Steps to run this script:
-- Clone the repo.
-- Change directories into the folder created by the step above.
-- Move your video files here.
-```bash
-cd <folder_name>
-```
-
-File structure
+### File structure
 - Folder from git clone
     - yourvideos (dir)
         - video1.mov (video file)
@@ -22,18 +14,22 @@ File structure
 | ```install```       | Installs ffmpeg, converts files and saves converted files into a directory - ```mp4videos```                                 
 |```converter```     | Converts files and saves the  converted files into a directory - ```mp4videos```          |
 
+### Steps to run this script:
+- Clone the repo.
+
 - If this is your first time of running this script, make the install file executable else jump to the nexxt step:
 ```bash
 chmod u+x install
-./install
+./install <source-folder> <video-type> <destination-folder>
+./install videos mov mp4-videos
 ```
 
 - Make the converter file executable and run it
 ```bash
 chmod u+x converter
-./converter
+./converter <source-folder> <video-type> <destination-folder>
+./converter videos mov mp4-videos
 ```
 
-### Shortcomings
-- The original video, has a Japanese audio with subtitiles but the converted file, does not have subtitiles.
-- The converted video is created in the same folder as the the original video in .mov format.
+### Limitations
+- Subtitle files for the .mov videos are not copied over to the .mp4 videos.
